@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>configAlert</string>
+	<string>etet</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -&gt; Void in
-            alert.dismissViewControllerAnimated(true, completion: nil)
-        }))
-        presentingViewController?.presentViewController(alert, animated: true, completion: nil)</string>
+	<string>// MARK: - &lt;#Mark#&gt;
+
+extension &lt;#class#&gt;&lt;#: delegate#&gt; {
+    &lt;#code#&gt;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3141D76F-5123-4B60-8D39-8AD76BF37BF4</string>
+	<string>A19F3C9D-F189-44A3-8D80-9DD65365CFA9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Config AlertController</string>
+	<string>EXTENTION</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,23 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>configAlert</string>
+	<string>fmfm</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -&gt; Void in
-            alert.dismissViewControllerAnimated(true, completion: nil)
-        }))
-        presentingViewController?.presentViewController(alert, animated: true, completion: nil)</string>
+	<string>//FIXME:</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3141D76F-5123-4B60-8D39-8AD76BF37BF4</string>
+	<string>EFA6584E-ACF3-48B2-B961-647CF24A23E3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Config AlertController</string>
+	<string>Fixme</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
