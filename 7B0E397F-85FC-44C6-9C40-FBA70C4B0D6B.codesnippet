@@ -9,7 +9,7 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private var &lt;#name#&gt;: &lt;#class#&gt; = &lt;#class#&gt;()</string>
+	<string>private var &lt;#name#&gt;                 : &lt;#class#&gt;         = &lt;#class#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7B0E397F-85FC-44C6-9C40-FBA70C4B0D6B</string>
 	<key>IDECodeSnippetLanguage</key>
