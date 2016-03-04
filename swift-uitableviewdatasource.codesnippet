@@ -20,9 +20,12 @@
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(&lt;#identifier#&gt;, forIndexPath: indexPath) as UITableViewCell
-        configureCell(cell, forRowAtIndexPath: indexPath)
-        return cell
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell")
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
+        }
+        configureCell(cell!, forRowAtIndexPath: indexPath)
+        return cell!
     }
     
     func configureCell(cell: UITableViewCell, forRowAtIndexPath: NSIndexPath) {
