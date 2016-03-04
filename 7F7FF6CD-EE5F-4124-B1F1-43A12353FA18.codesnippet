@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>viewControllerFromStoryboard</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>static var identifier = "&lt;#identifier#&gt;"
+    static var instance : &lt;#class#&gt; {
+        let storyboard = UIStoryboard(name: "&lt;#main#&gt;", bundle: nil)
+        return storyboard.instantiateViewControllerWithIdentifier(DetailViewController.identifier) as! &lt;#class#&gt;
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7F7FF6CD-EE5F-4124-B1F1-43A12353FA18</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>get ViewController from Storyboard</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
