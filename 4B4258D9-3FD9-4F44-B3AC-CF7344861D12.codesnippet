@@ -8,17 +8,20 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>// MARK: - UICollectionViewDelegateFlowLayout
-
-private let kMinInteritemSpacing  : CGFloat = 2
-private let kMinimumLineSpacing   : CGFloat = 2
-private let kEdgeInset                      = UIEdgeInsets(top: 8, left: 4, bottom: 8, right: 4)
-private let numberOfItemInRow     : CGFloat = 3
-private var itemSize              : CGSize  {
-    let width = UIScreen.mainScreen().bounds.width
-    let itemWidth = (width - kEdgeInset.left - kEdgeInset.right - (numberOfItemInRow - 1) * kMinInteritemSpacing ) / numberOfItemInRow
-    let itemHeight = itemWidth
-    return CGSize(width: itemWidth, height: itemHeight)
-}
+    private let kMinInteritemSpacing  : CGFloat = 0
+    private let kMinimumLineSpacing   : CGFloat = 0
+    private let kEdgeInset                      = UIEdgeInsets(top: 4, left: 0, bottom: 0, right: 0)
+    private var isPortrait            : Bool         = true
+    private var numberOfItemInRow     : CGFloat  {
+        return isPortrait ? 4 : 5
+    }
+    
+    private var itemSize              : CGSize  {
+        let width = UIScreen.mainScreen().bounds.width
+        let itemWidth = (width - kEdgeInset.left - kEdgeInset.right - (numberOfItemInRow - 1) * kMinInteritemSpacing ) / numberOfItemInRow
+        let itemHeight = itemWidth
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
 
 extension VideoPickerViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -&gt; UIEdgeInsets {
@@ -42,7 +45,7 @@ extension VideoPickerViewController: UICollectionViewDelegateFlowLayout {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift collectionviewDelegateFlowlayout</string>
+	<string>Swift: CollectionView Delegate Flowlayout</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
