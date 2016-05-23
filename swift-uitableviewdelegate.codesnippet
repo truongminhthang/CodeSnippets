@@ -2,14 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-uitableviewdelegate</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    //MARK: UITableViewDelegate
+	<string>//MARK: UITableViewDelegate
+
+extension &lt;#ViewController#&gt;: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -33,7 +33,8 @@
     
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -&gt; UIView? {
         
-    }</string>
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>183B54E8-CAE0-4C8F-B8B3-43E3965FDF1A</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -41,7 +42,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>UITableViewDelegate snippet for Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift UITableViewDelegate</string>
+	<string>Swift: UITableViewDelegate - UIViewController</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -6,10 +6,10 @@
 	<string>pl</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#name#&gt;                : &lt;#class#&gt;         = &lt;#class#&gt;
+	<string>private let &lt;#name#&gt;       : &lt;#class#&gt;         = &lt;#class#&gt;
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>3D6C1212-15D5-4746-9F08-943605BB2A89</string>

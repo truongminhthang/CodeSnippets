@@ -2,29 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>varc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>var &lt;#name#&gt; : &lt;#class#&gt; {
-        get {
-            &lt;#code#&gt;
-            return
-        }
-        
-        set {
-            &lt;#code#&gt;
-        }
-    }</string>
+	<string>NSError *error = nil;
+if ([[self managedObjectContext] save:&amp;error] == NO) {
+    NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>20A2B197-F395-4ACA-9505-781FDAF87EFB</string>
+	<string>80261DA3-5AA2-4CC9-AB9E-A25F83E8A78B</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>computed property</string>
+	<string>ObjC: CoreData / save context</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

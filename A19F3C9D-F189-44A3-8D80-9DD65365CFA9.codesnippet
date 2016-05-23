@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>// MARK: - &lt;#Mark#&gt;
 
-extension &lt;#class#&gt;&lt;#: delegate#&gt; {
+extension &lt;#class#&gt;: &lt;#delegate#&gt; {
     &lt;#code#&gt;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

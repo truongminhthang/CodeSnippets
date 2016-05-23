@@ -2,35 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-uitableviewdatasource</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    //MARK: UITableViewDataSource
+	<string>// MARK: - UITableViewDataSource
 
-    func numberOfSectionsInTableView(tableView: UITableView) -&gt; Int {
+extension &lt;#class#&gt;: UITableViewDataSource {
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -&gt; Int {
         return &lt;#numberOfSections#&gt;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
         return &lt;#numberOfRows#&gt;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell")
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
-        }
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell")
         configureCell(cell!, forRowAtIndexPath: indexPath)
         return cell!
     }
     
     func configureCell(cell: UITableViewCell, forRowAtIndexPath: NSIndexPath) {
         
-    }</string>
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>380DBCD1-ECFB-4A8C-B7B2-DDE628A540E3</string>
 	<key>IDECodeSnippetLanguage</key>
