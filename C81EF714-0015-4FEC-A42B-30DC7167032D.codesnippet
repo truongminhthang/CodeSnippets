@@ -2,24 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>pl</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#name#&gt;    = &lt;#class#&gt;
-</string>
+	<string>let image = UIImage(named:imageName!)
+      let photoData = UIImagePNGRepresentation(image!)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3D6C1212-15D5-4746-9F08-943605BB2A89</string>
+	<string>C81EF714-0015-4FEC-A42B-30DC7167032D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>private let </string>
+	<string>Swift: photo To NSData</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
