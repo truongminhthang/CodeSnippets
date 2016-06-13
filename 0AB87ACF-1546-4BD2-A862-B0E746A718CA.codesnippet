@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>1 - count</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func count() -&gt; Int {
+        // $$$ fetch request
+        let moc = AppDelegate.shareInstance.dataController.context
+
+        let fetchRequest = NSFetchRequest(entityName: entityName)
+        
+        var error: NSError?
+        let count =
+            moc.countForFetchRequest(fetchRequest, error: &amp;error)
+        
+        if count != NSNotFound {
+            return count
+        } else {
+            print("Could not fetch \(error), \(error?.userInfo)")
+        }
+        
+        return 0
+    }
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0AB87ACF-1546-4BD2-A862-B0E746A718CA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>1 - count</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

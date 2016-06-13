@@ -70,7 +70,7 @@ extension ViewController: NSFetchedResultsControllerDelegate {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift: NSFetchedResultsControllerDelegate</string>
+	<string>Swift: CoreData / NSFetchedResultsControllerDelegate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
