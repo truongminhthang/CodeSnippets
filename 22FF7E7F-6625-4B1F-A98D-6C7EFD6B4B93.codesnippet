@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>GMSMapViewDelegate
+  
+  let locationManager = CLLocationManager()
+  var didFindMyLocation = false
+  var myMarker = GMSMarker()
+  
+  
+  func setupViewmap() {
+    viewMap.delegate = self
+    locationManager.delegate = self
+    locationManager.requestWhenInUseAuthorization()
+  }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>22FF7E7F-6625-4B1F-A98D-6C7EFD6B4B93</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>setup GoogleMaps View and LocationManager</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
