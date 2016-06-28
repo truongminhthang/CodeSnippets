@@ -2,20 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vava</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>var &lt;#name#&gt;                  = &lt;#class#&gt;</string>
+	<string>- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *theCellClicked = [self.tableView cellForRowAtIndexPath:indexPath];
+    if (theCellClicked == theStaticCell) {
+        //Do stuff
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D9DBF0C1-9FFF-4E13-BB6C-EDFDD0917BDD</string>
+	<string>20C9BCFF-EC0A-43BA-9D4A-169A501272B5</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>var</string>
+	<string>ObjC: static cell fire func in code</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

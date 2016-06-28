@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIPopoverPresentationControllerDelegate
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       let vc = segue.destinationViewController
+       let pc = vc.popoverPresentationController!
+        pc.delegate = self
+        pc.sourceView = self.view
+        pc.sourceRect = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0)
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -&gt; UIModalPresentationStyle {
+        return .None
+    }
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>ED8BFF7D-C377-4852-834A-A899FEB7B6EB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift: Show center popup</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
