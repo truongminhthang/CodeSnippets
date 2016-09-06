@@ -8,7 +8,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>
-class CustomAnimationSegue : UIStoryboardSegue, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
+class CustomAnimationSegue : UIStoryboardSegue, UIViewControllerTransitioningDelegate {
     override func perform() {
         destinationViewController.transitioningDelegate = self
         super.perform()
@@ -22,6 +22,12 @@ class CustomAnimationSegue : UIStoryboardSegue, UIViewControllerTransitioningDel
         return self
     }
     
+}
+
+// MARK: - UIViewControllerAnimatedTransitioning
+
+extension CustomAnimationSegue: UIViewControllerAnimatedTransitioning {
+    
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -&gt; NSTimeInterval {
         return 0.35
     }
@@ -33,20 +39,20 @@ class CustomAnimationSegue : UIStoryboardSegue, UIViewControllerTransitioningDel
         
         let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-
+        
         
         if toViewController == destinationViewController {
             //present
             UIView.performWithoutAnimation({
                 toView.frame.origin.x = (fromViewController?.view.frame.width)!
-
+                
                 toView.frame.origin.y = (fromViewController?.view.frame.height)!
-
+                
                 containerView.addSubview(toView)
             })
             
             let duration = transitionDuration(transitionContext)
-            UIView.animateWithDuration(duration, animations: { 
+            UIView.animateWithDuration(duration, animations: {
                 toView.frame.origin.x = 0
                 toView.frame.origin.y = 0
                 }, completion: { (success) in
@@ -55,13 +61,13 @@ class CustomAnimationSegue : UIStoryboardSegue, UIViewControllerTransitioningDel
         } else {
             //dismiss
             let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
-
+            
             UIView.performWithoutAnimation({
                 containerView.insertSubview(toView, belowSubview: fromView)
             })
             let duration = transitionDuration(transitionContext)
-
-            UIView.animateWithDuration(duration, animations: { 
+            
+            UIView.animateWithDuration(duration, animations: {
                 fromView.frame.size = CGSizeZero
                 }, completion: { (success) in
                     transitionContext.completeTransition(success)
