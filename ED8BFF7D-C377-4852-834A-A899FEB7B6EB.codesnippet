@@ -8,16 +8,15 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>UIPopoverPresentationControllerDelegate
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-       let vc = segue.destinationViewController
-       let pc = vc.popoverPresentationController!
-        pc.delegate = self
-        pc.sourceView = self.view
-        pc.sourceRect = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination
+        let pc = vc.popoverPresentationController
+        pc?.sourceRect = CGRect(origin: self.view.center, size: CGSize.zero)
+        pc?.delegate = self
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -&gt; UIModalPresentationStyle {
-        return .None
+    func adaptivePresentationStyle(for controller: UIPresentationController) -&gt; UIModalPresentationStyle {
+        return .none
     }
 </string>
 	<key>IDECodeSnippetIdentifier</key>
