@@ -9,10 +9,10 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static var identifier = "&lt;#identifier#&gt;"
-    static var instance : &lt;#class#&gt; {
+	<string>static var identifier = "&lt;#className#&gt;"
+    static var instance : &lt;#className#&gt; {
         let storyboard = UIStoryboard(name: "&lt;#Main#&gt;", bundle: nil)
-        return storyboard.instantiateViewControllerWithIdentifier(&lt;#class#&gt;.identifier) as! &lt;#class#&gt;
+        return storyboard.instantiateViewController(withIdentifier: &lt;#className#&gt;.identifier) as! &lt;#className#&gt;
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7F7FF6CD-EE5F-4124-B1F1-43A12353FA18</string>
