@@ -2,23 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>gugu</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>guard &lt;#condition#&gt; else {
-            &lt;#code#&gt;
-            return
-        }</string>
+	<string>        let expectedCharSet = NSCharacterSet.urlQueryAllowed
+        let searchTerm = searchBar.text!.addingPercentEncoding(withAllowedCharacters: expectedCharSet)
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>469566A7-472E-41EE-9000-D16EBC93957D</string>
+	<string>CE752787-09AD-4A02-A0D1-2917B50B73CE</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>When we request API, we couldn't use librel string, we must con vert to API string request</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>guard</string>
+	<string>Swift: convert string to urlString</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
