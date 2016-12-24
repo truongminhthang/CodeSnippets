@@ -8,35 +8,41 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>// MARK: - UICollectionViewDelegateFlowLayout
-    private let kMinInteritemSpacing  : CGFloat = 0
-    private let kMinimumLineSpacing   : CGFloat = 0
-    private let kEdgeInset                      = UIEdgeInsets(top: 4, left: 0, bottom: 0, right: 0)
-    private var isPortrait            : Bool         = true
-    private var numberOfItemInRow     : CGFloat  {
+    let kMinInteritemSpacing  : CGFloat = 0
+    let kMinimumLineSpacing   : CGFloat = 0
+    let kEdgeInset                      = UIEdgeInsets(top: 4, left: 0, bottom: 0, right: 0)
+    var isPortrait            : Bool         = true
+    var numberOfItemInRow     : CGFloat  {
         return isPortrait ? 4 : 5
     }
     
-    private var itemSize              : CGSize  {
-        let width = UIScreen.mainScreen().bounds.width
-        let itemWidth = (width - kEdgeInset.left - kEdgeInset.right - (numberOfItemInRow - 1) * kMinInteritemSpacing ) / numberOfItemInRow
-        let itemHeight = itemWidth
-        return CGSize(width: itemWidth, height: itemHeight)
+    var _itemSize             : CGSize?
+    var itemSize              : CGSize  {
+        if _itemSize == nil {
+            
+            let width = UIScreen.main.bounds.width
+            let itemWidth = (width - kEdgeInset.left - kEdgeInset.right - (numberOfItemInRow - 1) * kMinInteritemSpacing ) / numberOfItemInRow
+            let itemHeight = itemWidth
+            _itemSize = CGSize(width: itemWidth, height: itemHeight)
+        }
+        return _itemSize!
     }
 
-extension VideoPickerViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -&gt; UIEdgeInsets {
+    
+    extension BaseCollectionMenuVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -&gt; UIEdgeInsets {
         return kEdgeInset
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -&gt; CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -&gt; CGSize {
         return itemSize
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -&gt; CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -&gt; CGFloat {
         return kMinInteritemSpacing
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -&gt; CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -&gt; CGFloat {
         return kMinimumLineSpacing
     }
 }</string>

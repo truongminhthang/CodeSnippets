@@ -3,22 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>AppDelegateShareInstance </string>
+	<string>ibaction</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string> static var share = {
-        return UIApplication.sharedApplication().delegate as! AppDelegate
-    }()
-</string>
+	<string>@IBAction func &lt;#function#&gt;() {
+        
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>32806077-21F4-41DA-9808-650AEFD4CC43</string>
+	<string>9340CFCF-7BF0-4CEB-8B32-959ACED169D3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>AppDelegateShareInstance</string>
+	<string>Swift 3: IBAction</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

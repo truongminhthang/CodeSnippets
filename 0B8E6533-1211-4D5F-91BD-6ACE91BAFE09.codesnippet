@@ -3,19 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lele</string>
+	<string>unwind</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#name#&gt;                  = &lt;#class#&gt;</string>
+	<string>@IBAction func unwindFrom&lt;#viewController#&gt;To&lt;#ViewController#&gt;(for unwindSegue: UIStoryboardSegue) {
+        
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>754DE6CC-E7D1-4408-873F-81190A1905DB</string>
+	<string>0B8E6533-1211-4D5F-91BD-6ACE91BAFE09</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>let</string>
+	<string>Swift 3: Unwind action </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

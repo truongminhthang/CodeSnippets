@@ -19,13 +19,13 @@
         return &lt;#numberOfItems#&gt;
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -&gt; UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(&lt;#identifier#&gt;, forIndexPath: indexPath) as! UICollectionViewCell
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: IndexPath) -&gt; UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:&lt;#identifier#&gt;, forIndexPath: indexPath) as! UICollectionViewCell
         configureCell(cell, forItemAtIndexPath: indexPath)
         return cell
     }
     
-    func configureCell(cell: UICollectionViewCell, forItemAtIndexPath: NSIndexPath) {
+    func configureCell(cell: UICollectionViewCell, forItemAtIndexPath: IndexPath) {
         
     }
     

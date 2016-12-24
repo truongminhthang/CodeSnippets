@@ -9,7 +9,7 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private var &lt;#name#&gt; : &lt;#class#&gt;! {
+	<string>var &lt;#name#&gt; : &lt;#class#&gt;! {
         didSet {
             &lt;#code#&gt;
         }
@@ -20,7 +20,7 @@
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>did set</string>
+	<string>Swift: Didset </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
