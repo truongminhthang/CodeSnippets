@@ -11,28 +11,15 @@
 
 extension &lt;#ViewController#&gt;: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+    // Called after the user changes the selection.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .checkmark
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -&gt; CGFloat {
-        
-    }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -&gt; CGFloat {
-        
-    }
-    
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -&gt; CGFloat {
-        
-    }
-    
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
-        
-    }
-    
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -&gt; UIView? {
-        
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .none
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

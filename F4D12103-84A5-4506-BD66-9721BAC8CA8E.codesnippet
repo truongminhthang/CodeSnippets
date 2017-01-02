@@ -3,33 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lifecyclemethod</string>
+	<string>delayCallMethodAfter</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// MARK: - LIFE CYCLE 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        &lt;#code#&gt;
+	<string>func delayCallMethodAfter(_ time: TimeInterval) {
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: &lt;#time#&gt;, target: self, selector: #selector(&lt;#callBack#&gt;), userInfo: nil, repeats: false)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        &lt;#code#&gt;
-    }
-    
-    deinit {
-        &lt;#statements#&gt;
+    func &lt;#callBack#&gt;() {
+        
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3F9646A3-F9D1-46DB-9331-DC5E9344BF17</string>
+	<string>F4D12103-84A5-4506-BD66-9721BAC8CA8E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: make life cycle method</string>
+	<string>Swift: Using timer to delay method</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

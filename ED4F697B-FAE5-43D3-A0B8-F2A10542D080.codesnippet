@@ -2,34 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lifecyclemethod</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// MARK: - LIFE CYCLE 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        &lt;#code#&gt;
+	<string>extension String {
+    var asciiString: String? {
+        if let data = self.data(using: String.Encoding.ascii, allowLossyConversion: true) {
+            return String.init(data: data, encoding: String.Encoding.ascii)
+        }
+        return nil
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        &lt;#code#&gt;
-    }
-    
-    deinit {
-        &lt;#statements#&gt;
-    }</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3F9646A3-F9D1-46DB-9331-DC5E9344BF17</string>
+	<string>ED4F697B-FAE5-43D3-A0B8-F2A10542D080</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: make life cycle method</string>
+	<string>Swift 3 - String: Bỏ dấu và ký tự tiếng Việt (á, à, ê -&gt; a, a, e)</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

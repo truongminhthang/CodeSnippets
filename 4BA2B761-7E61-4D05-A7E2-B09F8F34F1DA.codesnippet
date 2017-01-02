@@ -3,33 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lifecyclemethod</string>
+	<string>post</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// MARK: - LIFE CYCLE 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        &lt;#code#&gt;
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        &lt;#code#&gt;
-    }
-    
-    deinit {
-        &lt;#statements#&gt;
-    }</string>
+	<string>NotificationCenter.default.post(name: .&lt;#NotificationName#&gt;, object: &lt;#T##Any?#&gt;, userInfo: &lt;#T##[AnyHashable : Any]?#&gt;)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3F9646A3-F9D1-46DB-9331-DC5E9344BF17</string>
+	<string>4BA2B761-7E61-4D05-A7E2-B09F8F34F1DA</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: make life cycle method</string>
+	<string>Swift 3: Notification post</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

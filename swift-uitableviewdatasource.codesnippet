@@ -9,10 +9,9 @@
 	<key>IDECodeSnippetContents</key>
 	<string>// MARK: - UITableViewDataSource
 
-extension &lt;#class#&gt;&lt;#: UITableViewDataSource#&gt; {
-    
-    &lt;#override#&gt; func numberOfSectionsInTableView(tableView: UITableView) -&gt; Int {
-        return &lt;#numberOfSections#&gt;
+extension &lt;#ViewController#&gt;: UITableViewDataSource {
+    &lt;#override#&gt; func numberOfSections(in tableView: UITableView) -&gt; Int {
+        return &lt;#2#&gt;
     }
     
     &lt;#override#&gt; func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
@@ -26,7 +25,7 @@ extension &lt;#class#&gt;&lt;#: UITableViewDataSource#&gt; {
     }
     
     func configureCell(cell: UITableViewCell, forRowAtIndexPath: IndexPath) {
-        
+        &lt;#code#&gt;
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

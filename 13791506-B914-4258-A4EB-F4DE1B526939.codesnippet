@@ -10,12 +10,16 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>func registerNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(&lt;#selector#&gt;), name: NSNotification.Name(NotificationKey.&lt;#key#&gt;), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(&lt;#selector#&gt;), name: .&lt;#key#&gt;), object: nil)
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
-    }</string>
+    }
+func &lt;#handleNotification#&gt;(_ notification: Notification) {
+        guard let &lt;#object#&gt; = notification.userInfo?[&lt;#keyValue#&gt;] else {return}
+    }
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>13791506-B914-4258-A4EB-F4DE1B526939</string>
 	<key>IDECodeSnippetLanguage</key>
