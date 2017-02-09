@@ -3,25 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>swift-documentdirectory</string>
+	<string>swift 3 document Directory url </string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first as String
-let documentsDirectoryURL = NSURL.fileURLWithPath(path)</string>
+	<string>let documentsDirectoryURL : URL = {
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first! as String
+        return  URL(fileURLWithPath: path)
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E3AE2218-F56E-45BE-909F-1EC5DE83F3AE</string>
+	<string>B08EA581-2F1F-4CFF-A971-92DA2EB97A0A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>Document directory path snippet for Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift2: document directory</string>
+	<string>Swift 3: document Directory url </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
