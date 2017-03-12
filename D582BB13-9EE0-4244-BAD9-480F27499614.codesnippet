@@ -2,20 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>segue identifier enum</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        var string = "Trương Minh Thắng"
-        var foldingString = string.folding(options: .diacriticInsensitive, locale: Locale.current)
-</string>
+	<string>enum SegueIdentifier : String {
+    case &lt;#case#&gt; = "&lt;#value#&gt;"
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>ED4F697B-FAE5-43D3-A0B8-F2A10542D080</string>
+	<string>D582BB13-9EE0-4244-BAD9-480F27499614</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: Bỏ dấu tiếng việt</string>
+	<string>Swift 3: Segue Identifier enum</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
