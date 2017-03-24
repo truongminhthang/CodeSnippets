@@ -9,7 +9,7 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static var share = {
+	<string>static var shared = {
         return UIApplication.shared.delegate as! AppDelegate
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
