@@ -14,12 +14,28 @@
 @IBDesignable
 class Button: UIButton {
     @IBInspectable
+    
+    var titleMultiline: Bool = false {
+        didSet {
+            self.titleLabel?.numberOfLines = 0
+        }
+    }
+    
+    @IBInspectable
+    var titleAlignment: Int = 0 {
+        didSet {
+            if let alignment = NSTextAlignment(rawValue: titleAlignment) {
+                self.titleLabel?.textAlignment = alignment
+            }
+        }
+    }
+    
+    @IBInspectable
     var borderWidth: Float = 0 {
         didSet {
             self.layer.borderWidth = CGFloat(borderWidth)
         }
     }
-    
     @IBInspectable
     var borderColor: UIColor = UIColor.black {
         didSet {
@@ -31,7 +47,7 @@ class Button: UIButton {
     var cornerRadius: CGFloat = 0 {
         didSet {
             if cornerRadius == -1 {
-                self.layer.cornerRadius = self.bounds.height * 0.5
+                self.layer.cornerRadius = self.bounds.width &lt; self.bounds.height ? self.bounds.width * 0.5 : self.bounds.height * 0.5
             } else {
                 self.layer.cornerRadius = cornerRadius
             }
@@ -74,6 +90,6 @@ extension UIImage {
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
