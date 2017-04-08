@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>func registerNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(&lt;#selector#&gt;), name: .&lt;#key#&gt;), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(&lt;#selector#&gt;), name: .&lt;#key#&gt;, object: nil)
     }
     
     deinit {

@@ -9,13 +9,14 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    // MARK: - Core Data stack
-    
-    func applicationWillTerminate(_ application: UIApplication) {
+	<string>func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+
+
+   let projectName = "&lt;#projectName#&gt;"
     
     static var shared = {
         return UIApplication.shared.delegate as! AppDelegate
@@ -23,6 +24,18 @@
     
     static var persistentContainer: NSPersistentContainer {
         return AppDelegate.shared.persistentContainer
+    }
+    
+    static var viewContext : NSManagedObjectContext {
+        if #available(iOS 10.0, *) {
+            return AppDelegate.persistentContainer.viewContext
+        } else {
+            // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
+            let coordinator = AppDelegate.shared.persistentStoreCoordinator
+            let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+            managedObjectContext.persistentStoreCoordinator = coordinator
+            return managedObjectContext
+        }
     }
     
     @available(iOS 10.0, *)
@@ -61,7 +74,7 @@
     
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = Bundle.main.url(forResource: "&lt;#ProjectName#&gt;", withExtension: "momd")!
+        let modelURL = Bundle.main.url(forResource: self.projectName, withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelURL)!
     }()
     
@@ -69,7 +82,7 @@
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.appendingPathComponent("&lt;#ProjectName#&gt;.sqlite")
+        let url = self.applicationDocumentsDirectory.appendingPathComponent(self.projectName + ".sqlite")
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
             try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
@@ -89,27 +102,12 @@
         
         return coordinator
     }()
-    
-    static var viewContext: NSManagedObjectContext {
-        return AppDelegate.shared.viewContext
-    }
-    
-    lazy var viewContext: NSManagedObjectContext = {
-        if #available(iOS 10.0, *) {
-            return self.persistentContainer.viewContext
-        } else {
-            // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
-            let coordinator = self.persistentStoreCoordinator
-            var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-            managedObjectContext.persistentStoreCoordinator = coordinator
-            return managedObjectContext
-        }
-    }()
-    
+
+
     func saveContext () {
-        if viewContext.hasChanges {
+        if AppDelegate.viewContext.hasChanges {
             do {
-                try viewContext.save()
+                try AppDelegate.viewContext.save()
                 NotificationCenter.default.post(name: Notification.Name.init("View Context has been saved"), object: nil)
                 
             } catch {

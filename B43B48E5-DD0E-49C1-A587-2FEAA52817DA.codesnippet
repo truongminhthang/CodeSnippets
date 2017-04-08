@@ -3,26 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>main queue</string>
+	<string>global queue</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeExpression</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.main.async {
+	<string>DispatchQueue.global(qos: .userInitiated).async {
             &lt;#code#&gt;
+            DispatchQueue.main.async {
+                &lt;#code#&gt;
+            }
         }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E8847AF3-D9A6-40C6-9DC1-981DD1A1042A</string>
+	<string>B43B48E5-DD0E-49C1-A587-2FEAA52817DA</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>GCD dispatch_async on main queue snippet for Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: push block in main queue</string>
+	<string>Swift 3: put block in global queue</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

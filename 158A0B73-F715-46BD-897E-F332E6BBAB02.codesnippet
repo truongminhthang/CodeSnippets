@@ -3,26 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>AppDelegate setup coredata swift 3</string>
+	<string>setup coreData</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string> // MARK: - Core Data stack
-    
-    static var shared = {
-        return UIApplication.shared.delegate as! AppDelegate
-    }()
-
-    func applicationWillTerminate(_ application: UIApplication) {
+	<string> func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+ 
+// MARK: - Core Data stack
+    static var shared = {
+        return UIApplication.shared.delegate as! AppDelegate
+    }()
     
     static var persistentContainer: NSPersistentContainer {
         return AppDelegate.shared.persistentContainer
+    }
+    
+    static var context : NSManagedObjectContext {
+        return AppDelegate.persistentContainer.viewContext
     }
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -32,7 +35,7 @@
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "&lt;#ProjectName#&gt;")
+        let container = NSPersistentContainer(name: "&lt;#CoreDataExample#&gt;")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -51,10 +54,6 @@
         })
         return container
     }()
-    
-    static var viewContext : NSManagedObjectContext {
-        return AppDelegate.persistentContainer.viewContext
-    }
 
     // MARK: - Core Data Saving support
 
@@ -73,11 +72,11 @@
     }
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E1365628-9476-48DF-AE70-26BA1F9EAC64</string>
+	<string>158A0B73-F715-46BD-897E-F332E6BBAB02</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: AppDelegate setup coredata</string>
+	<string>Swift 3: Setup coreData</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

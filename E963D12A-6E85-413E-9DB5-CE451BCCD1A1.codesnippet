@@ -3,23 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>main queue</string>
+	<string>Table View Automatic Dimension</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeExpression</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.main.async {
-            &lt;#code#&gt;
-        }</string>
+	<string>tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E8847AF3-D9A6-40C6-9DC1-981DD1A1042A</string>
+	<string>E963D12A-6E85-413E-9DB5-CE451BCCD1A1</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>GCD dispatch_async on main queue snippet for Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: push block in main queue</string>
+	<string>Swift 3: Table View Automatic Dimension</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

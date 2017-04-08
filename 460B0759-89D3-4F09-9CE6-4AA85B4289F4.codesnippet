@@ -3,23 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>main queue</string>
+	<string>get content view controller </string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeExpression</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.main.async {
-            &lt;#code#&gt;
-        }</string>
+	<string>// MARK: - contentViewController
+
+extension UIViewController {
+    var contentViewController: UIViewController {
+        if let navContentVC = self as? UINavigationController {
+            return navContentVC.visibleViewController!
+        } else {
+            return self
+        }
+    }
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E8847AF3-D9A6-40C6-9DC1-981DD1A1042A</string>
+	<string>460B0759-89D3-4F09-9CE6-4AA85B4289F4</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>GCD dispatch_async on main queue snippet for Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: push block in main queue</string>
+	<string>Swift 3: ContentViewController</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
