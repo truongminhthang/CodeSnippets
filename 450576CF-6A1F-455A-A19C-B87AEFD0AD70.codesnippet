@@ -3,24 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>global queue</string>
+	<string>imageView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeExpression</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.global(qos: .userInitiated).async {
-            &lt;#code#&gt;
-            DispatchQueue.main.async {
-                &lt;#code#&gt;
-            }
-        }</string>
+	<string>var imageView = UIImageView()
+    private var image: UIImage? {
+        set {
+            imageView.image = newValue
+        }
+        get {
+            return imageView.image
+        }
+    }
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B43B48E5-DD0E-49C1-A587-2FEAA52817DA</string>
+	<string>450576CF-6A1F-455A-A19C-B87AEFD0AD70</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: put block in global queue</string>
+	<string>Swift 3: ImageView and Image</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
