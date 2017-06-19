@@ -9,11 +9,15 @@
 	<key>IDECodeSnippetContents</key>
 	<string>class BaseModelController: NSObject, UIPageViewControllerDataSource {
     
-    var viewcontrollers: [UIViewController]
-    
-    init(with viewcontrollers: [UIViewController]) {
-        self.viewcontrollers = viewcontrollers
-    }
+    var viewcontrollers: [UIViewController] = {
+        let dateFormatter = DateFormatter()
+        let pageData = dateFormatter.monthSymbols
+        return pageData!.map{ data in
+            let dataViewController = DataViewController.instance
+            dataViewController.dataObject = data
+            return dataViewController
+            }
+    }()
     
     func viewControllerAtIndex(_ index: Int) -&gt; UIViewController? {
         // Return the data view controller for the given index.
@@ -24,13 +28,7 @@
     }
     
     func indexOfViewController(_ viewController: UIViewController) -&gt; Int {
-        var result : Int = NSNotFound
-        for (index, element) in viewcontrollers.enumerated() {
-            if element === viewController {
-                result = index
-            }
-        }
-        return result
+        return viewcontrollers.index(of: viewController) ?? NSNotFound
     }
     
     // MARK: - Page View Controller Data Source
