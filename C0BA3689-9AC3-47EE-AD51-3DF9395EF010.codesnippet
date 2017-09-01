@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>action</string>
+	<string>urlForResource</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@IBAction func &lt;#function#&gt;(sender: &lt;#Type#&gt;) {
-        
-    }</string>
+	<string>guard let path = Bundle.main.url(forResource: "test", withExtension: "m4a") else {
+                return
+            }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>9340CFCF-7BF0-4CEB-8B32-959ACED169D3</string>
+	<string>C0BA3689-9AC3-47EE-AD51-3DF9395EF010</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: IBAction</string>
+	<string>get url For Resource</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
