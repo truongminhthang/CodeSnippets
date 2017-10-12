@@ -4,12 +4,19 @@
 <dict>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeExpression</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let alertController = UIAlertController(title: &lt;#title#&gt;, message: &lt;#massage#&gt;, preferredStyle: &lt;#.Alert#&gt;)
-            alertController.addAction(UIAlertAction(title: &lt;#"OK"#&gt;, style: &lt;#.Default#&gt;, handler: &lt;#handler#&gt;))
-            self.presentViewController(alertController, animated: true, completion: nil)</string>
+	<string>func showAlert(vc: UIViewController, title:String, message: String) {
+    
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+    
+    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result : UIAlertAction) -&gt; Void in}
+    
+    alertController.addAction(okAction)
+    
+    vc.present(alertController, animated: true, completion: nil)
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C3CA89FB-C1F5-4340-B25E-367AFAD74B97</string>
 	<key>IDECodeSnippetLanguage</key>
