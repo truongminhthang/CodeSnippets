@@ -24,11 +24,13 @@ if UIImagePickerController.isSourceTypeAvailable(.camera) {
 	<string>BFF918B2-0500-4DA9-8B6E-754C00134273</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create by Chung</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Swift - Camera</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
