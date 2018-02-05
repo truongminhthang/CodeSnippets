@@ -16,6 +16,7 @@
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
+    @objc
 func &lt;#handleNotification#&gt;(_ notification: Notification) {
         guard let &lt;#object#&gt; = notification.userInfo?[&lt;#keyValue#&gt;] else {return}
     }
