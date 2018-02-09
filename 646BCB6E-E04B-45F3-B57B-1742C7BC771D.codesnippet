@@ -3,19 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>guardreturn </string>
+	<string>route return json </string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>guard &lt;#condition#&gt; else {return}</string>
+	<string>routes.add(method: .get, uri: "/") { (request, response) in
+    do {
+        try response.setBody(json: ["message": "Hello world!!"])
+            .setHeader(.contentType, value: "application/json").completed()
+        
+    } catch {
+        response.setBody(string: "Error").completed(status: .internalServerError)
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>359E78D1-1E7A-4885-A6B7-63FC8370CE9C</string>
+	<string>646BCB6E-E04B-45F3-B57B-1742C7BC771D</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift 3: Guard - return </string>
+	<string>[Perfect] Routes return json </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
